@@ -5,6 +5,8 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
+import "../global.css";
+
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
@@ -19,12 +21,8 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText
           type="title"
-          style={{
-            color: "red",
-            backgroundColor: "yellow",
-            borderRadius: 8,
-            padding: 15,
-          }}
+          // style={styles.textStyles}
+          className="bg-purple-500 p-4 rounded-md"
         >
           Always be Progressive!
         </ThemedText>
@@ -84,5 +82,11 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: "absolute",
+  },
+  textStyles: {
+    color: "red",
+    backgroundColor: "yellow",
+    borderRadius: 8,
+    padding: 10,
   },
 });
